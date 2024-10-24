@@ -1,0 +1,108 @@
+/* Secciones Comunes */
+.section {
+    padding: var(--spacing-xl) 0;
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Hero */
+.hero {
+    background-color: transparent;
+    text-align: center;
+    padding: var(--spacing-xl) 0;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Testimonials */
+.testimonials {
+    background-color: white;
+    padding: var(--spacing-xl) 0;
+}
+
+.testimonial {
+    background-color: var(--background-color);
+    border-radius: 10px;
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.testimonial p {
+    font-style: italic;
+    margin-bottom: var(--spacing-sm);
+font-size: 0.875rem;
+}
+
+.testimonial .author {
+    text-align: right;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.9);
+    z-index: var(--z-modal);
+    display: none;
+    padding: var(--spacing-md);
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 80vh;
+    margin: auto;
+    display: block;
+}
+
+.modal-description {
+    color: white;
+    text-align: center;
+    margin-top: var(--spacing-md);
+    padding: 0 var(--spacing-md);
+}
+
+/* Botones comunes */
+.ver-mas-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.ver-mas-btn:hover {
+    background-color: var(--gold);
+    transform: translateY(-2px);
+}
+
+.conocenos-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-lg);
+    }
+}
