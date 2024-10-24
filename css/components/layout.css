@@ -1,0 +1,140 @@
+/* Header y navegación */
+#main-header {
+    background-color: var(--header-background);
+    color: white;
+    padding: var(--spacing-xs) 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: var(--z-header);
+    box-shadow: var(--shadow-md);
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-xs) var(--spacing-md);
+    width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* Fixed Bar */
+.fixed-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--header-background);
+    padding: var(--spacing-xs) 0;
+    z-index: var(--z-header);
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+}
+
+.fixed-bar ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.fixed-bar a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    padding: var(--spacing-xs);
+    min-height: 44px;
+}
+
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: var(--spacing-xs);
+}
+
+.nav-text {
+    font-size: 0.625rem;
+    line-height: 1.2;
+    text-align: center;
+    max-width: 80px;
+    word-wrap: break-word;
+}
+
+/* Footer */
+footer {
+    background-color: var(--header-background);
+    color: white;
+    padding: var(--spacing-xl) 0 calc(60px + var(--spacing-xl));
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    align-items: center;
+}
+
+.social-media {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.social-media a {
+    color: var(--primary-color);
+    transition: color var(--transition-normal);
+}
+
+.social-media a:hover {
+    color: var(--gold);
+}
+
+@media (min-width: 768px) {
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .fixed-bar,
+    .carousel-control,
+    .whatsapp-button,
+    .social-media {
+        display: none !important;
+    }
+    
+    body {
+        padding: 0;
+    }
+    
+    .container {
+        max-width: 100%;
+    }
+}
