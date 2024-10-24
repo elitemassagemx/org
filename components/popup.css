@@ -1,0 +1,122 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: var(--z-popup);
+    display: none;
+    overflow-y: auto;
+    padding: var(--spacing-sm);
+}
+
+.popup-content {
+    background-color: white;
+    padding: var(--spacing-lg);
+    border-radius: 15px;
+    position: relative;
+    width: 95%;
+    max-width: 600px;
+    margin: var(--spacing-sm) auto;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.popup-content h2 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+    font-size: 1.5rem;
+}
+
+.popup-content p {
+    margin-bottom: var(--spacing-md);
+    line-height: 1.6;
+}
+
+#popup-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: var(--spacing-md);
+}
+
+.popup-details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.popup-benefits,
+.popup-includes {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.popup-benefits-item,
+.popup-includes-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.popup-benefits-item img,
+.popup-includes-item img {
+    width: 24px;
+    height: 24px;
+}
+
+.popup-duration {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-sm);
+}
+
+.whatsapp-button {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    background-color: #25D366;
+    color: white;
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: 25px;
+    font-weight: bold;
+    margin-top: var(--spacing-lg);
+    transition: all var(--transition-normal);
+}
+
+.close {
+    position: absolute;
+    top: var(--spacing-sm);
+    right: var(--spacing-sm);
+    font-size: 24px;
+    color: var(--text-color);
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.1);
+    transition: all var(--transition-normal);
+}
+
+.close:hover {
+    background-color: rgba(0,0,0,0.2);
+}
+
+@media (min-width: 768px) {
+    .popup-content {
+        margin: 10% auto;
+        width: 80%;
+    }
+
+    .whatsapp-button {
+        width: auto;
+    }
+}
